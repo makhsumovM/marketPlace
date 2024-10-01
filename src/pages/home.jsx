@@ -9,7 +9,6 @@ import { Button } from 'antd'
 import Jbl from "../assets/JBL.png"
 import playstation5 from "../assets/playStation5.png"
 import dxtarak from "../assets/dxtarak.png"
-import kalonki2 from '../assets/Kalonki2.png'
 import duxi2 from "../assets/duxi2.png"
 import delivery1 from "../assets/delivery1.png"
 import delivery2 from "../assets/delivery2.png"
@@ -192,7 +191,7 @@ const Home = () => {
         </div>
         <div className="flex flex-wrap gap-8 justify-center items-center mt-8 max-md:max-w-full">
           <img
-            src={kalonki2}
+            src={duxi2}
             className="object-contain self-stretch my-auto aspect-[0.95] min-w-[240px] w-[270px]"
           />
           <img
