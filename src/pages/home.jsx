@@ -9,7 +9,7 @@ import { Button } from 'antd'
 import Jbl from "../assets/JBL.png"
 import playstation5 from "../assets/playStation5.png"
 import dxtarak from "../assets/dxtarak.png"
-import kalonki2 from '../assets/kalonki2.png'
+import kalonki2 from '../assets/Kalonki2.png'
 import duxi2 from "../assets/duxi2.png"
 import delivery1 from "../assets/delivery1.png"
 import delivery2 from "../assets/delivery2.png"
@@ -36,7 +36,7 @@ const Home = () => {
     <div className='py-[]'>
       <div className='section1  py-[70px] flex items-center justify-around sm:flex-col lg:flex-row sm:gap-[50px]'>
           <div className='flex sm:flex-wrap sm:gap-5 lg:flex-col lg:w-[20%]'>
-          {categories.slice(0,9).map((el)=>{
+          {categories?.slice(0,9).map((el)=>{
             return <Link to={`/categories/${el.id}`} key={el.id}><p className='sm:p-[10px_20px] sm:bg-[#F5F5F5] lg:p-0 lg:bg-inherit' >{el.categoryName}</p></Link>
           })}
             
@@ -78,7 +78,7 @@ const Home = () => {
                 </h1>
 
                 <div className="w-[100%] flex flex-wrap gap-[20px] items-center justify-center py-[40px]">
-                  {categories.slice(0,6).map((el)=>{
+                  {categories?.slice(0,6).map((el)=>{
                     return <Link to={`/categories/${el.id}`} key={el.id}>
                     <div className="group hover:bg-[#DB4444] border-[2px] border-[#91919170] w-[170px] h-[145px] flex flex-col justify-evenly items-center">
                     <img
@@ -106,7 +106,7 @@ const Home = () => {
             </Link>
          </div>
             <div className='flex flex-wrap justify-around'>
-              {products.slice(0,4).map((product)=>{
+              {products?.slice(0,4).map((product)=>{
                
                 return <CustomCard key={product.id}  productName={product.productName} price={product.price} discountPrice={product.discountPrice} image={product.image} ID={product.id}  product={product}/>
               })}
@@ -129,7 +129,7 @@ const Home = () => {
         <h2 className='flex items-center gap-3 text-[#DB4444] w-[95%] m-auto'> <span className='bg-[#DB4444] p-[40px_20px]'></span>Our Products</h2>
         <h2 className="text-[48px] font-bold p-[20px]">Explore Our Products</h2>
         <div className='grid lg:grid-cols-3  sm:grid-cols-1 md:grid-cols-2 justify-items-center justify-around gap-[20px] py-[50px]'>
-          {products.slice(4).map((product)=>{
+          {products?.slice(4).map((product)=>{
              
             return <CustomCard  productName={product.productName} price={product.price} discountPrice={product.discountPrice} image={product.image} ID={product.id}  product={product}  key={product.id}/>
           })}

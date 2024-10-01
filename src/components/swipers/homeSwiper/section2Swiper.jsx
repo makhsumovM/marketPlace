@@ -44,7 +44,7 @@ const Section2Swiper = () => {
 
     }}
     >
-      {products.map(product=>(
+      {products?.map(product=>(
         <SwiperSlide key={product.id}>
           <CustomCard productName={product.productName} price={product.price} discountPrice={product.discountPrice} image={product.image}/>
         </SwiperSlide>
